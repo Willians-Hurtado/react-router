@@ -24,7 +24,7 @@ export default function PostList() {
                                         <h3 className="card-title">{post.title}</h3>
                                         <p className="card-text">{post.author}</p>
                                         <p className="card-text">{post.public}</p>
-                                        <Link to={`/PostList/${post.id}`} className='btn btn-primary'>
+                                        <Link to={`/posts/${post.id}`} className='btn btn-primary'>
                                             Read Post's body
                                         </Link>
                                     </div>

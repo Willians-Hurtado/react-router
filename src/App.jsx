@@ -3,8 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import ChiSiamo from "./pages/ChiSiamo"
 import Postlist from "./pages/PostList"
+import Post from "./pages/Post"
 
-function App() {
+export default function App() {
 
 
   return (
@@ -13,10 +14,10 @@ function App() {
         <Routes>
           <Route Component={DefaultLayout}>
 
-            <Route path="/" Component={HomePage} />
-            <Route path="/ChiSiamo" Component={ChiSiamo} />
-            <Route path="/PostList" Component={Postlist} />
-
+            <Route path="/" element={<HomePage />} />
+            <Route path="/chisiamo" Component={ChiSiamo} />
+            <Route path="/postlist" Component={Postlist} />
+            <Route path="/posts/:id" Component={Post} />
           </Route>
         </Routes>
       </BrowserRouter>
@@ -25,4 +26,3 @@ function App() {
   )
 }
 
-export default App
